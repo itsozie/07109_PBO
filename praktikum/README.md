@@ -1,5 +1,5 @@
 ## tugas praktikum
 ## List tugas
 <ul>
-  <li>1.</li>
+  <li>Modul1 membuat class dan disertai CRUD</li>
 </ul>
