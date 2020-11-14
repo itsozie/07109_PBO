@@ -8,16 +8,10 @@ public class Main {
 //    MEMODIFIKASI STATIC MENJADI PUBLIC
 public ArrayList<fatchur_07109_OwnerEntity> dataOwner = new ArrayList();
 public Scanner input;
-
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
         Main m = new Main();
         m.menu();
     }
-
     public void menu() {
         input = new Scanner(System.in);
         int pilih,indexdat ;
@@ -60,16 +54,12 @@ public Scanner input;
          Date fatchur_07109_tanggal_masuk = new Date(input.next());
          System.out.print("input nama pegawai = ");
          String fatchur_07109_pegawai = input.next();
-         System.out.print("input jenis cucian");
-         System.out.print("CK / CB / CS  = ");
-         String fatchur_07109_katalog = input.next();
          System.out.print("input berat Cucian = ");
          float fatchur_07109_berat_cucian = input.nextByte();
          System.out.print("input Tgl Selesai (dd/mm/yyyy) = ");
          Date fatchur_07109_tanggal_selesai = new Date(input.next());
          dataOwner.add(new fatchur_07109_OwnerEntity(fatchur_07109_nama_pelanggan,
-         fatchur_07109_tanggal_masuk,fatchur_07109_pegawai,
-         fatchur_07109_katalog,fatchur_07109_berat_cucian,fatchur_07109_tanggal_selesai));
+         fatchur_07109_tanggal_masuk,fatchur_07109_pegawai,fatchur_07109_berat_cucian,fatchur_07109_tanggal_selesai));
          
     }
 
@@ -82,8 +72,6 @@ public Scanner input;
             System.out.println("Tanggal Masuk = "+new SimpleDateFormat("dd-MM-yyyy").format(dataOwner.get(i)
                     .getFatchur_07109_tanggal_masuk()));
             System.out.println("pegawai yang melayani = "+dataOwner.get(i).getFatchur_07109_pegawai());
-            System.out.println("Jenis cucian =  " + dataOwner.get(i).getFatchur_07109_katalog() + 
-                    " [ " + dataOwner.get(i).getTipekatalog() + " ]");
             System.out.println("berat Cucian = "+dataOwner.get(i).getFatchur_07109_berat_cucian()+" Kg");
             System.out.println("Tanggal Selesai = "+new SimpleDateFormat("dd-MM-yyyy").format(dataOwner.get(i)
                     .getFatchur_07109_tanggal_selesai()));
@@ -98,15 +86,12 @@ public Scanner input;
          Date fatchur_07109_tanggal_masuk = new Date(input.next());
          System.out.print("input nama pegawai = ");
          String fatchur_07109_pegawai = input.next();
-         System.out.print("input jenis cucian = ");
-         String fatchur_07109_katalog = input.next();
          System.out.print("input berat cucian = ");
          float fatchur_07109_berat = input.nextByte();
          System.out.print("input Tgl Selesai (dd/mm/yyyy) = ");
          Date fatchur_07109_tanggal_selesai = new Date(input.next());
          dataOwner.set(indexdat,new fatchur_07109_OwnerEntity(fatchur_07109_nama_pelanggan,
-         fatchur_07109_tanggal_masuk,fatchur_07109_pegawai,
-         fatchur_07109_katalog,fatchur_07109_berat,fatchur_07109_tanggal_selesai));  
+         fatchur_07109_tanggal_masuk,fatchur_07109_pegawai,fatchur_07109_berat,fatchur_07109_tanggal_selesai));  
     }
     
     public void delete(int indexdat){
