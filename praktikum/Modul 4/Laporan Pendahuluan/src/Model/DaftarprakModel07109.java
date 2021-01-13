@@ -18,36 +18,36 @@ import java.util.ArrayList;
 
 public class DaftarprakModel07109 implements ModelInterfaces07109 {
 
-    public ArrayList<DaftarprakEntity07109> daftarprak07171ArrayList;
+    public ArrayList<DaftarprakEntity07109> daftarprak07109ArrayList;
 
     public DaftarprakModel07109() {
-        daftarprak07171ArrayList = new ArrayList<DaftarprakEntity07109>();
+        daftarprak07109ArrayList = new ArrayList<DaftarprakEntity07109>();
     }
 
     public ArrayList<DaftarprakEntity07109> alldataprak() {
-        return daftarprak07171ArrayList;
+        return daftarprak07109ArrayList;
     }
 
-    public void insertDataDaftarprak(DaftarprakEntity07109 daftarPrak07171) {
-        daftarprak07171ArrayList.add(daftarPrak07171);
+    public void insertDataDaftarprak(DaftarprakEntity07109 daftarPrak07109) {
+        daftarprak07109ArrayList.add(daftarPrak07109);
     }
 
     public ArrayList<DaftarprakEntity07109> getDaftarprakArrayList() {
-        return daftarprak07171ArrayList;
+        return daftarprak07109ArrayList;
     }
 
     @Override
     public void view() {
-        for (DaftarprakEntity07109 daftarprak07171 : daftarprak07171ArrayList) {
+        for (DaftarprakEntity07109 daftarprak07109 : daftarprak07109ArrayList) {
             System.out.println("===============================================================");
-            System.out.println(" NPM : " + daftarprak07171.getPraktikan().getNpm()
-                    + "\n Nama : " + daftarprak07171.getPraktikan().getNama()
-                    + "\n Password : " + daftarprak07171.getPraktikan().getPassword()
-                    + "\n No Telp : " + daftarprak07171.getPraktikan().getNo_telp()
-                    + "\n Tanggal Lahir : " + new SimpleDateFormat("dd-MM-yyyy").format(daftarprak07171.getPraktikan().getTgllahir())
-                    + "\n Praktikum : " + PraktikumEntity07109.nama[daftarprak07171.getIndexPrak()]
+            System.out.println(" NPM : " + daftarprak07109.getPraktikan().getNpm()
+                    + "\n Nama : " + daftarprak07109.getPraktikan().getNama()
+                    + "\n Password : " + daftarprak07109.getPraktikan().getPassword()
+                    + "\n No Telp : " + daftarprak07109.getPraktikan().getNo_telp()
+                    + "\n Tanggal Lahir : " + new SimpleDateFormat("dd-MM-yyyy").format(daftarprak07109.getPraktikan().getTgllahir())
+                    + "\n Praktikum : " + PraktikumEntity07109.nama[daftarprak07109.getIndexPrak()]
                     + "\n IsVerified : ");
-            if (daftarprak07171.isVerified() == false) {
+            if (daftarprak07109.isVerified() == false) {
                 System.out.println("Belum Di Verifikasi Admin");
             } else {
                 System.out.println("Telah Di Verifikasi");
@@ -58,11 +58,11 @@ public class DaftarprakModel07109 implements ModelInterfaces07109 {
 
     public int cekData(String npm, String password) {
         int loop = 0;
-        if (daftarprak07171ArrayList.size() == 0) {
+        if (daftarprak07109ArrayList.size() == 0) {
             loop = -1;//data kosong
         } else {
-            for (int i = 0; i < daftarprak07171ArrayList.size(); i++) {
-                if (daftarprak07171ArrayList.get(i).getPraktikan().getNpm().equals(npm)) {
+            for (int i = 0; i < daftarprak07109ArrayList.size(); i++) {
+                if (daftarprak07109ArrayList.get(i).getPraktikan().getNpm().equals(npm)) {
                     loop = i;
                     break;
                 } else {
@@ -74,10 +74,10 @@ public class DaftarprakModel07109 implements ModelInterfaces07109 {
     }
 
     public DaftarprakEntity07109 showDaftarprak(int index) {
-        return daftarprak07171ArrayList.get(index);
+        return daftarprak07109ArrayList.get(index);
     }
 
-    public void updateIsVerified(int index, DaftarprakEntity07109 daftarprak07171) {
-        daftarprak07171ArrayList.set(index, daftarprak07171);
+    public void updateIsVerified(int index, DaftarprakEntity07109 daftarprak07109) {
+        daftarprak07109ArrayList.set(index, daftarprak07109);
     }
 }
